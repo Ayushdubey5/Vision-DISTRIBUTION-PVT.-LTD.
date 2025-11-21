@@ -37,10 +37,10 @@ useEffect(() => {
 
     emailjs
       .sendForm(
-        "service_ev2zxlv", // Your EmailJS Service ID
-        "template_4pfrljt", // Your EmailJS Template ID
+        "", // Your EmailJS Service ID
+        "", // Your EmailJS Template ID
         form.current,
-        "HTiHIZuatdkAUUOxr" // Your EmailJS Public Key
+        "" // Your EmailJS Public Key
       )
       .then(
         (result) => {
@@ -49,7 +49,7 @@ useEffect(() => {
           setLoading(false)
         },
         (error) => {
-          alert("Something went wrong, please try again later.")
+          alert("Something went wrong. Please contact them directly through email.")
           setLoading(false)
         }
       )
