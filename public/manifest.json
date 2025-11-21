@@ -1,0 +1,15 @@
+{
+  "name": "Vision Distribution Pvt. Ltd.",
+  "short_name": "VDPL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0B7A4B",
+  "icons": [
+    {
+      "src": "/Vision logo only SVG (1).svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

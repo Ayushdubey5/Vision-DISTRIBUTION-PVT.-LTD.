@@ -1,3 +1,15 @@
 User-agent: *
 Allow: /
+
+# Block Next.js internal files from being indexed
+Disallow: /_next/
+Disallow: /api/
+
+# Your sitemap location
 Sitemap: https://www.visionworld.in/sitemap.xml
+
+# Optional: Delay heavy crawling (good for performance)
+Crawl-delay: 5
+
+# Tell Google the primary domain
+Host: www.visionworld.in

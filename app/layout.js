@@ -87,6 +87,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="canonical" href="https://www.visionworld.in" />
+
         {/* Essential meta tags */}
         <meta charSet="UTF-8" />
         <meta name="robots" content="index, follow" />
