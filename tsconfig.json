@@ -1,27 +1,40 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "target": "ES6",
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    "target": "ES6", // Modern JS
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true, // Allow JS files
+    "skipLibCheck": true, // Skip type checks for node_modules
+    "strict": true, // Enable all strict type checks
+    "noEmit": true, // Don't output files
+    "esModuleInterop": true, // Support for commonjs modules
+    "module": "esnext", // Module type for bundlers
+    "moduleResolution": "node", // Use Node module resolution
+    "resolveJsonModule": true, // Allow importing JSON
+    "isolatedModules": true, // Required for Next.js
+    "jsx": "preserve", // Next.js handles JSX
+    "incremental": true, // Incremental compilation
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ] // Path alias for imports
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
