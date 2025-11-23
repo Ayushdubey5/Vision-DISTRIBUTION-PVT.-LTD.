@@ -95,8 +95,8 @@ export default function About() {
           <div className="hidden md:flex space-x-8 text-sm font-medium">
             {[
               { href: "/", label: "Home" },
-              { href: "/pages/about", label: "About Us" },
-              { href: "/pages/contact", label: "Contact Us" },
+              { href: "/about", label: "About Us" },
+              { href: "/contact", label: "Contact Us" },
             ].map((item) => (
               <motion.div key={item.href} whileHover={{ scale: 1.1 }}>
                 <Link
@@ -129,8 +129,8 @@ export default function About() {
             >
               {[
                 { href: "/", label: "Home" },
-                { href: "/pages/about", label: "About Us" },
-                { href: "/pages/contact", label: "Contact Us" },
+                { href: "/about", label: "About Us" },
+                { href: "/contact", label: "Contact Us" },
               ].map((item) => (
                 <Link
                   key={item.href}

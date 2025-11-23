@@ -102,8 +102,8 @@ useEffect(() => {
             <div className="hidden md:flex space-x-6">
               {[
                 { href: "/", label: "Home" },
-                { href: "/pages/about", label: "About Us" },
-                { href: "/pages/contact", label: "Contact Us" },
+                { href: "/about", label: "About Us" },
+                { href: "/contact", label: "Contact Us" },
               ].map((item, index) => (
                 <Link
                   key={index}
@@ -136,8 +136,8 @@ useEffect(() => {
           <div className="md:hidden bg-white shadow-lg px-4 py-3 space-y-2">
             {[
               { href: "/", label: "Home" },
-              { href: "/pages/about", label: "About Us" },
-              { href: "/pages/contact", label: "Contact Us" },
+              { href: "/about", label: "About Us" },
+              { href: "/contact", label: "Contact Us" },
             ].map((item, index) => (
               <Link
                 key={index}

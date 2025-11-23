@@ -216,11 +216,11 @@ export default function VisionDistribution() {
             <div className="hidden md:flex space-x-6">
               {[
                 { id: "home", label: "Home", type: "scroll" },
-                { href: "/pages/about", label: "About Us", type: "link" },
+                { href: "/about", label: "About Us", type: "link" },
                 { id: "verticals", label: "Verticals", type: "scroll" },
                 { id: "retail", label: "Retail", type: "scroll" },
                 { id: "achievements", label: "Achievements", type: "scroll" },
-                { href: "/pages/contact", label: "Contact Us", type: "link" },
+                { href: "/contact", label: "Contact Us", type: "link" },
               ].map((item, index) =>
                 item.type === "link" ? (
                   <Link key={index} href={item.href} className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">{item.label}</Link>
@@ -250,12 +250,12 @@ export default function VisionDistribution() {
           <div className="md:hidden bg-white shadow-lg px-3 py-3 space-y-2 flex flex-col">
             {[
               { href: "/", label: "Home", type: "link" },
-              { href: "./pages/about", label: "About Us", type: "link" },
+              { href: "/about", label: "About Us", type: "link" },
               { id: "verticals", label: "Verticals", type: "scroll" },
               { id: "retail", label: "Retail", type: "scroll" },
               { id: "govt-experience", label: "Govt Experience", type: "scroll" },
               { id: "achievements", label: "Achievements", type: "scroll" },
-              { href: "/pages/contact", label: "Contact Us", type: "link" },
+              { href: "/contact", label: "Contact Us", type: "link" },
             ].map((item, index) =>
               item.type === "link" ? (
                 <Link key={index} href={item.href} className="block text-left text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">{item.label}</Link>
@@ -380,7 +380,7 @@ export default function VisionDistribution() {
             India to becoming a trusted partner for global brands, VDPL has built its
             success on integrity, innovation, and long-term partnerships.
           </p>
-          <a href="/pages/about/">
+          <a href="/about/">
             <button className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors">
               Know More
             </button></a>

@@ -11,9 +11,12 @@ const manrope = Manrope({
 
 export const metadata = {
   title: "Vision Distribution Pvt. Ltd. | India’s Leading Telecom, Electronics & Government Supply Distributor",
+
   description:
     "Vision Distribution Pvt. Ltd. (VDPL), established in 1994, is a leading telecom and electronics distribution company with a Pan-India presence, 9 branches, 300+ employees, and a turnover exceeding ₹4500 Cr (FY 24–25). Authorized partner for Apple, Samsung, Oppo, Swiss Military, and a dominant retail chain in Delhi NCR (Mobiliti World). Executed 23+ lakh smartphones, tablets & smart-class orders worth ₹2900+ Cr in government projects.",
-    
+
+  metadataBase: new URL("https://www.visionworld.in"),
+
   keywords: [
     "Telecom distributor in India",
     "Smartphone distribution company",
@@ -32,11 +35,6 @@ export const metadata = {
     "Swiss Military India",
   ],
 
-  authors: [{ name: "Vision Distribution Pvt. Ltd.", url: "https://www.visionworld.in" }],
-  creator: "Vision Distribution Pvt. Ltd.",
-  publisher: "Vision Distribution Pvt. Ltd.",
-
-  metadataBase: new URL("https://www.visionworld.in"),
   alternates: {
     canonical: "https://www.visionworld.in",
   },
@@ -76,10 +74,12 @@ export const metadata = {
 
   themeColor: "#0B7A4B",
   category: "Business",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
+
+  other: {
+    "geo.region": "IN-DL",
+    "geo.placename": "New Delhi",
+    "geo.position": "28.6517;77.2219",
+    ICBM: "28.6517, 77.2219",
   },
 }
 
@@ -87,18 +87,44 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Canonical link */}
         <link rel="canonical" href="https://www.visionworld.in" />
 
-        {/* Essential meta tags */}
-        <meta charSet="UTF-8" />
-        <meta name="robots" content="index, follow" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        {/* Google Analytics — replace G-XXXXXXX */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M656WRGEPW"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-M656WRGEPW');
+            `,
+          }}
+        />
 
-        {/* Geo tagging - improves local SEO */}
-        <meta name="geo.region" content="IN-DL" />
-        <meta name="geo.placename" content="New Delhi" />
-        <meta name="geo.position" content="28.6517;77.2219" />
-        <meta name="ICBM" content="28.6517, 77.2219" />
+        {/* JSON-LD Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Vision Distribution Pvt. Ltd.",
+              url: "https://www.visionworld.in",
+              logo: "https://www.visionworld.in/Vision logo only SVG (1).svg",
+              sameAs: [
+                "https://www.linkedin.com/company/vision-distribution",
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "IN",
+                addressLocality: "New Delhi",
+                addressRegion: "Delhi",
+              },
+            }),
+          }}
+        />
       </head>
 
       <body
